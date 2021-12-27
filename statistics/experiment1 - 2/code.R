@@ -1,24 +1,14 @@
-# Magnetic permittivity of free space
-mu = 4 * pi * 10^-7
-
 # Data
-radius1 = 0.105
-radius2 = 0.015
-windings1 = 200
-windings2 = 2000
-frequency = c(10,20,30,40)
-current1 = c(5.748,5.561,5.280,4.953) * 0.0506 # non ho capito se voltaggio o
-voltage2 = c(0.034,0.062,0.081,0.112)
-
-# mutual inductance
-M = (mu * windings1 * windings2 * radius2^2) / (2 * radius1)
+frequency = c( 10, 20, 30, 40 )
+current1 = c( 5.748, 5.561, 5.280, 4.953 ) * 0.0506
+voltage2 = c( 0.034, 0.062, 0.081, 0.112 )
 
 # Linear regression
-model = lm( voltage2 ~ I( current1 * frequency  * 2 * pi ) )
+model = lm( voltage2 ~ I( current1 * frequency * 2 * pi ) )
 summary(model)
 
 # Plots with regression line
-plot(current1 * frequency  * 2 * pi, voltage2)
+plot(current1 * frequency * 2 * pi, voltage2)
 abline(model)
 
 # Residuals
