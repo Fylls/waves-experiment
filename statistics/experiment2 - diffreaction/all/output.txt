@@ -1,0 +1,31 @@
+[1] 6.745e-07
+
+Call:
+lm(formula = x ~ I(l/a))
+
+Residuals:
+         1          2          3          4 
+ 1.583e-05  1.643e-05 -5.235e-05  2.009e-05 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 8.478e-05  3.680e-05   2.304    0.148    
+I(l/a)      6.659e-07  1.597e-09 417.062 5.75e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.28e-05 on 2 degrees of freedom
+Multiple R-squared:      1,	Adjusted R-squared:      1 
+F-statistic: 1.739e+05 on 1 and 2 DF,  p-value: 5.749e-06
+
+
+	Shapiro-Wilk normality test
+
+data:  res
+W = 0.67906, p-value = 0.006443
+
+
+	Shapiro-Wilk normality test
+
+data:  x
+W = 0.91928, p-value = 0.5329
